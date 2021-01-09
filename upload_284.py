@@ -1,5 +1,6 @@
 from typing import List
 
+
 PATH = r'C:\Users\maaya\Dropbox\Python\upload_284 - Donald\accounts.txt'
 
 def parse_file(path: str) -> List[int]:
@@ -20,7 +21,6 @@ def parse_file(path: str) -> List[int]:
 def very_rich(accounts: List[int], first_day: int, last_day: int) -> int:
     """Takes parsed data and first and last day slices the list and returns the sum."""
     return sum(accounts[first_day - 1:last_day])
-
 
 
 accounts = parse_file(PATH)
