@@ -3,6 +3,7 @@ from typing import List
 
 PATH = r'C:\Users\maaya\Dropbox\Python\upload_284 - Donald\accounts.txt'
 
+
 def parse_file(path: str) -> List[int]:
     """Takes a file path, reads the txt file and returns a list
     of integers in order and according to positive or negative state."""
@@ -10,11 +11,11 @@ def parse_file(path: str) -> List[int]:
         accounts: List[str] = file.readlines()
     cleaned_accounts = [account.rstrip('\r\n') for account in accounts]
     formatted_accounts = []
-    for i, account in enumerate(cleaned_accounts):
+    for account in cleaned_accounts:
         if account[0] == '+':
-           formatted_accounts.append(int(account[1:]))
+            formatted_accounts.append(int(account[1:]))
         if account[0] == '-':
-           formatted_accounts.append(int(account[1:]) * -1)
+            formatted_accounts.append(int(account[1:]) * -1)
     return formatted_accounts
 
 
